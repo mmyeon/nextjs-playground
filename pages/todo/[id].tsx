@@ -1,6 +1,7 @@
 import { NextPageContext } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import styles from './todo.module.css';
 
 type Todo = {
   completed: boolean;
@@ -12,7 +13,7 @@ type Todo = {
 const Todo = ({ todo }: { todo: Todo }) => {
   return (
     <>
-      <h1>{todo.title}</h1>
+      <h1 className={styles.title}>{todo.title}</h1>
 
       <ul>
         <li>
